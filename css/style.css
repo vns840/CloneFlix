@@ -1,0 +1,156 @@
+:root {
+  --vermelho: #e50914;
+  --preto: #141414;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  background: var(--preto);
+  font-family: "Roboto", sans-serif;
+  color: #ffff;
+}
+header {
+  padding: 10px 0;
+}
+header .container {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+img#logoP {
+  width: 60px;
+}
+header .logo {
+  margin-left: 5px;
+  color: var(--vermelho);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+}
+header nav a {
+  text-decoration: none;
+  color: #aaa;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+header nav a:hover {
+  color: var(--vermelho);
+}
+/*filme*/
+.filme-principal {
+  font-size: 16px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+    url("../img/capa-house.jpg");
+  height: 500px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.filme-principal .descricao {
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+.filme-principal .titulo {
+  font-size: 50px;
+  margin-top: 20%;
+}
+.btn {
+  background: var(--vermelho);
+  color: #ffff;
+  padding: 15px 35px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+.btn:hover {
+  background: #ffff;
+  color: var(--vermelho);
+}
+#play img {
+  width: 15px;
+  height: 15px;
+  transform: translateY(20%);
+  margin-right: 5px;
+}
+#plus img {
+  width: 15px;
+  height: 15px;
+  transform: translateY(20%);
+  margin-right: 5px;
+}
+.container {
+  margin-left: 20px;
+}
+.filme-principal .botoes {
+  margin-left: 20px;
+}
+.filme-principal .container {
+  width: 70%;
+}
+.box-filme {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.subtitulo {
+  padding: 10px 0;
+}
+.subtitulo::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin: 2px 4px;
+  background: var(--vermelho);
+  justify-content: center;
+}
+footer {
+  background: var(--vermelho);
+}
+footer p {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+}
+footer a {
+  color: #ffff;
+}
+footer a:hover {
+  color: var(--preto);
+  cursor: pointer;
+}
+/*responsive*/
+
+@media screen and (max-width: 700px) {
+  header .container {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+  }
+  .btn {
+    margin-top: 5px;
+    width: 200px;
+    padding: 15px;
+    font-size: 14px;
+  }
+  img#logoP {
+    margin: 5px 0;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .descricao {
+    width: 50%;
+  }
+}
